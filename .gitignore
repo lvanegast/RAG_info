@@ -1,0 +1,46 @@
+Need to output the gitignore content.```
+# ----------------------------------------
+# 1. ENTORNO VIRTUAL (CRUCIAL)
+# ----------------------------------------
+# Ignorar la carpeta completa del entorno virtual (ej. 'venv' o '.venv')
+# Esto contiene todas las librerías instaladas, que deben ser ignoradas.
+venv/
+.venv/
+# Ignorar los archivos que indican que estás usando un entorno virtual
+.env
+
+# ----------------------------------------
+# 2. ARCHIVOS DE RAG GENERADOS (GRANDES Y TEMPORALES)
+# ----------------------------------------
+# Esto evita subir los embeddings y el índice FAISS.
+# El sistema RAG se reconstruye a partir de los documentos fuente.
+mi_rag/
+# Si lo creaste con otro nombre, ignóralo también:
+# carpeta_rag/
+# Si por alguna razón los tienes fuera de una carpeta (NO recomendado):
+faiss.index
+chunks.json
+
+# ----------------------------------------
+# 3. ARCHIVOS DE PYTHON
+# ----------------------------------------
+# Archivos de caché
+__pycache__/
+*.pyc
+*.pyd
+*.so
+# Logs y bases de datos temporales
+*.log
+*.sqlite
+sqlite.db
+# Notebooks de Jupyter (si usas)
+.ipynb_checkpoints
+# Archivos de instalación y compilación
+dist/
+build/
+
+# ----------------------------------------
+# 4. ARCHIVOS DE SISTEMA
+# ----------------------------------------
+.DS_Store # Mac OS
+Thumbs.db # Windows
